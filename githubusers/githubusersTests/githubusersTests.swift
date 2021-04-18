@@ -10,24 +10,43 @@ import XCTest
 
 class githubusersTests: XCTestCase {
 
+    var responseList = [GitHubUser]()
+    var provider: ProviderProtocol?
+
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        try super.setUpWithError()
+        provider = Provider(dataSource: HttpRequestManager())
     }
 
     override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        try super.tearDownWithError()
+        provider = nil
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
+    func testUsersList_success() throws {
+        let expectation = self.expectation(description: "getRepositoryList")
 
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+        guard let provider = provider else {
+            XCTFail("Something went wrong")
+            return
         }
+
+        provider.fetchUsersList{ result in
+            switch result {
+            case .success(let repositories):
+                self.responseList = repositories
+                expectation.fulfill()
+                print(self.responseList)
+                XCTAssertTrue(self.responseList.count > 0)
+            case .failure(let error):
+                print("Error:\(error.localizedDescription)")
+                expectation.fulfill()
+                XCTAssertTrue(error == .unavailable)
+            }
+        }
+
+        waitForExpectations(timeout: 20, handler: nil)
     }
+
 
 }
