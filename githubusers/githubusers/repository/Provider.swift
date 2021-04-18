@@ -7,13 +7,15 @@
 //
 
 import Foundation
+import UIKit
 
 protocol ProviderProtocol: AnyObject {
     func fetchUsersList(completion: @escaping (Result<[GitHubUser], HttpRequestError>) -> Void)
-    func fetchUserDetail(user: String, completion: @escaping (Result<UserDetail, HttpRequestError>) -> Void) 
+    func fetchUserDetail(user: String, completion: @escaping (Result<GitHubUser, HttpRequestError>) -> Void)
+    func fetchUserImage(avatarUrl: String, _ completion: @escaping (_ image: UIImage) -> Void) 
 }
 
- class Provider: ProviderProtocol  {
+class Provider: ProviderProtocol  {
 
     private var dataSource: HttpProtocol
 
@@ -32,14 +34,20 @@ protocol ProviderProtocol: AnyObject {
         }
     }
 
-    func fetchUserDetail(user: String, completion: @escaping (Result<UserDetail, HttpRequestError>) -> Void) {
-        dataSource.get(Constants.baseUrl + Constants.apiSlash + user) { (_ result: Result<UserDetail, HttpRequestError>) in
+    func fetchUserDetail(user: String, completion: @escaping (Result<GitHubUser, HttpRequestError>) -> Void) {
+        dataSource.get(Constants.baseUrl + Constants.apiSlash + user) { (_ result: Result<GitHubUser, HttpRequestError>) in
             switch result {
-            case .success(let repositoryList):
-                completion(.success(repositoryList))
+            case .success(let userDetail):
+                completion(.success(userDetail))
             case .failure(let error):
                 completion(.failure(error))
             }
         }
     }
- }
+
+    func fetchUserImage(avatarUrl: String, _ completion: @escaping (_ image: UIImage) -> Void) {
+        dataSource.requestImage(avatarUrl) { result in
+            completion(result)
+        }
+    }
+}

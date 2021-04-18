@@ -11,7 +11,7 @@ import XCTest
 class githubusersTests: XCTestCase {
 
     var responseList = [GitHubUser]()
-    var userDetail = UserDetail(login: "",
+    var userDetail = GitHubUser(login: "",
                                 avatarUrl: "",
                                 name: "",
                                 htmlUrl: "",
@@ -79,5 +79,19 @@ class githubusersTests: XCTestCase {
         waitForExpectations(timeout: 20, handler: nil)
     }
 
+    func testUserImage() throws {
+        let expectation = self.expectation(description: "testUserImage")
+
+        guard let provider = provider else {
+            XCTFail("Something went wrong")
+            return
+        }
+        provider.fetchUserImage(avatarUrl: "https://avatars.githubusercontent.com/u/1?v=4") { result in
+            XCTAssertNotNil(result)
+            expectation.fulfill()
+        }
+
+        waitForExpectations(timeout: 20, handler: nil)
+    }
 
 }

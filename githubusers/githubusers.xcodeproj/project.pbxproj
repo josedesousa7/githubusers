@@ -16,7 +16,6 @@
 		5A9DA642262C1F3C00BE6107 /* githubusersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9DA641262C1F3C00BE6107 /* githubusersTests.swift */; };
 		5A9DA64D262C1F3C00BE6107 /* githubusersUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9DA64C262C1F3C00BE6107 /* githubusersUITests.swift */; };
 		5A9DA672262C226B00BE6107 /* GitHubUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9DA671262C226B00BE6107 /* GitHubUser.swift */; };
-		5A9DA67A262C27A000BE6107 /* UserDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9DA679262C27A000BE6107 /* UserDetail.swift */; };
 		5A9DA680262C2D0100BE6107 /* HttRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9DA67F262C2D0100BE6107 /* HttRequestManager.swift */; };
 		5A9DA69A262C36E100BE6107 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9DA699262C36E100BE6107 /* Constants.swift */; };
 		5A9DA6A4262C3DBE00BE6107 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9DA6A3262C3DBE00BE6107 /* Provider.swift */; };
@@ -63,7 +62,6 @@
 		5A9DA64C262C1F3C00BE6107 /* githubusersUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = githubusersUITests.swift; sourceTree = "<group>"; };
 		5A9DA64E262C1F3C00BE6107 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A9DA671262C226B00BE6107 /* GitHubUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubUser.swift; sourceTree = "<group>"; };
-		5A9DA679262C27A000BE6107 /* UserDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetail.swift; sourceTree = "<group>"; };
 		5A9DA67F262C2D0100BE6107 /* HttRequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttRequestManager.swift; sourceTree = "<group>"; };
 		5A9DA691262C369400BE6107 /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		5A9DA699262C36E100BE6107 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -194,7 +192,6 @@
 			isa = PBXGroup;
 			children = (
 				5A9DA671262C226B00BE6107 /* GitHubUser.swift */,
-				5A9DA679262C27A000BE6107 /* UserDetail.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -478,7 +475,6 @@
 				5A9DA672262C226B00BE6107 /* GitHubUser.swift in Sources */,
 				5A9DA62B262C1F3900BE6107 /* AppDelegate.swift in Sources */,
 				5A9DA6A4262C3DBE00BE6107 /* Provider.swift in Sources */,
-				5A9DA67A262C27A000BE6107 /* UserDetail.swift in Sources */,
 				5A9DA62D262C1F3900BE6107 /* SceneDelegate.swift in Sources */,
 				5A9DA6B6262C41A900BE6107 /* Keys.swift in Sources */,
 				5A9DA69A262C36E100BE6107 /* Constants.swift in Sources */,
