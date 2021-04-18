@@ -23,4 +23,6 @@ public enum Constants {
         }
         return baseUrl
     }()
+
+    static let apiSlash = "/"
 }

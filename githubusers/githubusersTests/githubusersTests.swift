@@ -11,6 +11,12 @@ import XCTest
 class githubusersTests: XCTestCase {
 
     var responseList = [GitHubUser]()
+    var userDetail = UserDetail(login: "",
+                                avatarUrl: "",
+                                name: "",
+                                htmlUrl: "",
+                                company: "",
+                                publicRepos: 0)
     var provider: ProviderProtocol?
 
     override func setUpWithError() throws {
@@ -24,7 +30,7 @@ class githubusersTests: XCTestCase {
     }
 
     func testUsersList_success() throws {
-        let expectation = self.expectation(description: "getRepositoryList")
+        let expectation = self.expectation(description: "getUserList")
 
         guard let provider = provider else {
             XCTFail("Something went wrong")
@@ -38,6 +44,31 @@ class githubusersTests: XCTestCase {
                 expectation.fulfill()
                 print(self.responseList)
                 XCTAssertTrue(self.responseList.count > 0)
+            case .failure(let error):
+                print("Error:\(error.localizedDescription)")
+                expectation.fulfill()
+                XCTAssertTrue(error == .unavailable)
+            }
+        }
+
+        waitForExpectations(timeout: 20, handler: nil)
+    }
+
+    func testUserDetail_success() throws {
+        let expectation = self.expectation(description: "getUserDetail")
+
+        guard let provider = provider else {
+            XCTFail("Something went wrong")
+            return
+        }
+
+        provider.fetchUserDetail(user: "josedesousa7") { result in
+            switch result {
+            case .success(let userDetail):
+                self.userDetail = userDetail
+                expectation.fulfill()
+                print( self.userDetail)
+                XCTAssertNotNil(self.userDetail.login)
             case .failure(let error):
                 print("Error:\(error.localizedDescription)")
                 expectation.fulfill()

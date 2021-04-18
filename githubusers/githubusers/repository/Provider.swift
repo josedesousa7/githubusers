@@ -10,6 +10,7 @@ import Foundation
 
 protocol ProviderProtocol: AnyObject {
     func fetchUsersList(completion: @escaping (Result<[GitHubUser], HttpRequestError>) -> Void)
+    func fetchUserDetail(user: String, completion: @escaping (Result<UserDetail, HttpRequestError>) -> Void) 
 }
 
  class Provider: ProviderProtocol  {
@@ -22,6 +23,17 @@ protocol ProviderProtocol: AnyObject {
 
     func fetchUsersList(completion: @escaping (Result<[GitHubUser], HttpRequestError>) -> Void) {
         dataSource.get(Constants.baseUrl) { (_ result: Result<[GitHubUser], HttpRequestError>) in
+            switch result {
+            case .success(let repositoryList):
+                completion(.success(repositoryList))
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        }
+    }
+
+    func fetchUserDetail(user: String, completion: @escaping (Result<UserDetail, HttpRequestError>) -> Void) {
+        dataSource.get(Constants.baseUrl + Constants.apiSlash + user) { (_ result: Result<UserDetail, HttpRequestError>) in
             switch result {
             case .success(let repositoryList):
                 completion(.success(repositoryList))
