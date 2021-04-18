@@ -15,6 +15,9 @@
 		5A9DA637262C1F3B00BE6107 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A9DA635262C1F3B00BE6107 /* LaunchScreen.storyboard */; };
 		5A9DA642262C1F3C00BE6107 /* githubusersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9DA641262C1F3C00BE6107 /* githubusersTests.swift */; };
 		5A9DA64D262C1F3C00BE6107 /* githubusersUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9DA64C262C1F3C00BE6107 /* githubusersUITests.swift */; };
+		B355FA707807C2E9D035DFCD /* Pods_githubusers_githubusersUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 413104980F20EB34F86EEFF4 /* Pods_githubusers_githubusersUITests.framework */; };
+		C832586C74FD58F15F09C5B6 /* Pods_githubusersTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEE6F3E31CAB4C7A4139EA40 /* Pods_githubusersTests.framework */; };
+		EC2F03DF2349D4838C36B8D5 /* Pods_githubusers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32F4DEA77F719D5EFEEC2E5D /* Pods_githubusers.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +38,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		06E428440D7E173F9212DFDA /* Pods-githubusers.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-githubusers.release.xcconfig"; path = "Target Support Files/Pods-githubusers/Pods-githubusers.release.xcconfig"; sourceTree = "<group>"; };
+		10C40AB30852F0790E566E45 /* Pods-githubusers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-githubusers.debug.xcconfig"; path = "Target Support Files/Pods-githubusers/Pods-githubusers.debug.xcconfig"; sourceTree = "<group>"; };
+		32F4DEA77F719D5EFEEC2E5D /* Pods_githubusers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_githubusers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		413104980F20EB34F86EEFF4 /* Pods_githubusers_githubusersUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_githubusers_githubusersUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A9DA627262C1F3900BE6107 /* githubusers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = githubusers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A9DA62A262C1F3900BE6107 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5A9DA62C262C1F3900BE6107 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +56,11 @@
 		5A9DA648262C1F3C00BE6107 /* githubusersUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = githubusersUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A9DA64C262C1F3C00BE6107 /* githubusersUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = githubusersUITests.swift; sourceTree = "<group>"; };
 		5A9DA64E262C1F3C00BE6107 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		880A91E1BE897336785728A5 /* Pods-githubusersTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-githubusersTests.release.xcconfig"; path = "Target Support Files/Pods-githubusersTests/Pods-githubusersTests.release.xcconfig"; sourceTree = "<group>"; };
+		8EE575CEBA8106C1BCCF9C70 /* Pods-githubusers-githubusersUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-githubusers-githubusersUITests.release.xcconfig"; path = "Target Support Files/Pods-githubusers-githubusersUITests/Pods-githubusers-githubusersUITests.release.xcconfig"; sourceTree = "<group>"; };
+		998680A7691477A4CFB04FD6 /* Pods-githubusers-githubusersUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-githubusers-githubusersUITests.debug.xcconfig"; path = "Target Support Files/Pods-githubusers-githubusersUITests/Pods-githubusers-githubusersUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		EAE4778DDB5A0D7F5C5C49AC /* Pods-githubusersTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-githubusersTests.debug.xcconfig"; path = "Target Support Files/Pods-githubusersTests/Pods-githubusersTests.debug.xcconfig"; sourceTree = "<group>"; };
+		FEE6F3E31CAB4C7A4139EA40 /* Pods_githubusersTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_githubusersTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC2F03DF2349D4838C36B8D5 /* Pods_githubusers.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C832586C74FD58F15F09C5B6 /* Pods_githubusersTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +84,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B355FA707807C2E9D035DFCD /* Pods_githubusers_githubusersUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		14809BFF33ABE8FB7F0AAB70 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				10C40AB30852F0790E566E45 /* Pods-githubusers.debug.xcconfig */,
+				06E428440D7E173F9212DFDA /* Pods-githubusers.release.xcconfig */,
+				998680A7691477A4CFB04FD6 /* Pods-githubusers-githubusersUITests.debug.xcconfig */,
+				8EE575CEBA8106C1BCCF9C70 /* Pods-githubusers-githubusersUITests.release.xcconfig */,
+				EAE4778DDB5A0D7F5C5C49AC /* Pods-githubusersTests.debug.xcconfig */,
+				880A91E1BE897336785728A5 /* Pods-githubusersTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		5A9DA61E262C1F3900BE6107 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +112,8 @@
 				5A9DA640262C1F3C00BE6107 /* githubusersTests */,
 				5A9DA64B262C1F3C00BE6107 /* githubusersUITests */,
 				5A9DA628262C1F3900BE6107 /* Products */,
+				14809BFF33ABE8FB7F0AAB70 /* Pods */,
+				5E3BFAA9732BB4C06F358049 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -128,6 +159,16 @@
 			path = githubusersUITests;
 			sourceTree = "<group>";
 		};
+		5E3BFAA9732BB4C06F358049 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				32F4DEA77F719D5EFEEC2E5D /* Pods_githubusers.framework */,
+				413104980F20EB34F86EEFF4 /* Pods_githubusers_githubusersUITests.framework */,
+				FEE6F3E31CAB4C7A4139EA40 /* Pods_githubusersTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +176,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5A9DA651262C1F3C00BE6107 /* Build configuration list for PBXNativeTarget "githubusers" */;
 			buildPhases = (
+				2BA0C6C026B1945CA27A5061 /* [CP] Check Pods Manifest.lock */,
 				5A9DA623262C1F3900BE6107 /* Sources */,
 				5A9DA624262C1F3900BE6107 /* Frameworks */,
 				5A9DA625262C1F3900BE6107 /* Resources */,
+				969CB142DE7641F27082C6B0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -152,6 +195,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5A9DA654262C1F3C00BE6107 /* Build configuration list for PBXNativeTarget "githubusersTests" */;
 			buildPhases = (
+				23A68F290CBA8F12C8C8806E /* [CP] Check Pods Manifest.lock */,
 				5A9DA639262C1F3C00BE6107 /* Sources */,
 				5A9DA63A262C1F3C00BE6107 /* Frameworks */,
 				5A9DA63B262C1F3C00BE6107 /* Resources */,
@@ -170,9 +214,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5A9DA657262C1F3C00BE6107 /* Build configuration list for PBXNativeTarget "githubusersUITests" */;
 			buildPhases = (
+				4AF3712FF4AA766F9119AD55 /* [CP] Check Pods Manifest.lock */,
 				5A9DA644262C1F3C00BE6107 /* Sources */,
 				5A9DA645262C1F3C00BE6107 /* Frameworks */,
 				5A9DA646262C1F3C00BE6107 /* Resources */,
+				A9DA23320654476003157166 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -253,6 +299,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		23A68F290CBA8F12C8C8806E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-githubusersTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2BA0C6C026B1945CA27A5061 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-githubusers-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4AF3712FF4AA766F9119AD55 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-githubusers-githubusersUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		969CB142DE7641F27082C6B0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-githubusers/Pods-githubusers-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-githubusers/Pods-githubusers-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-githubusers/Pods-githubusers-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A9DA23320654476003157166 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-githubusers-githubusersUITests/Pods-githubusers-githubusersUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-githubusers-githubusersUITests/Pods-githubusers-githubusersUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-githubusers-githubusersUITests/Pods-githubusers-githubusersUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5A9DA623262C1F3900BE6107 /* Sources */ = {
@@ -434,6 +583,7 @@
 		};
 		5A9DA652262C1F3C00BE6107 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 10C40AB30852F0790E566E45 /* Pods-githubusers.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -453,6 +603,7 @@
 		};
 		5A9DA653262C1F3C00BE6107 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 06E428440D7E173F9212DFDA /* Pods-githubusers.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -472,6 +623,7 @@
 		};
 		5A9DA655262C1F3C00BE6107 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EAE4778DDB5A0D7F5C5C49AC /* Pods-githubusersTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -494,6 +646,7 @@
 		};
 		5A9DA656262C1F3C00BE6107 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 880A91E1BE897336785728A5 /* Pods-githubusersTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -516,6 +669,7 @@
 		};
 		5A9DA658262C1F3C00BE6107 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 998680A7691477A4CFB04FD6 /* Pods-githubusers-githubusersUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -536,6 +690,7 @@
 		};
 		5A9DA659262C1F3C00BE6107 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8EE575CEBA8106C1BCCF9C70 /* Pods-githubusers-githubusersUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
