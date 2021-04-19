@@ -11,19 +11,19 @@ import  Alamofire
 import AlamofireImage
 
 protocol HttpProtocol {
-    func get<T> (_ requestUrl : String, _ completion: @escaping (Result<T, HttpRequestError>) -> Void) where T: Codable
+    func get<T> (_ requestUrl : String, _ completion: @escaping (Result<T, Error>) -> Void) where T: Codable
     func requestImage(_ requestUrl: String, _ completion: @escaping (_ image: UIImage) -> Void)
 }
 
 class HttpRequestManager: HttpProtocol  {
 
-    func get<T>(_ requestUrl: String, _ completion: @escaping (Result<T, HttpRequestError>) -> Void) where T : Codable {
+    func get<T>(_ requestUrl: String, _ completion: @escaping (Result<T, Error>) -> Void) where T : Codable {
         AF.request(requestUrl).responseJSON { response in
             switch response.result {
             case .success:
                 let decoder = JSONDecoder()
                 guard let data = response.data else {
-                    completion(.failure(.requestFailed))
+                    completion(.failure(HttpRequestError.requestFailed))
                     return
                 }
                 do {
@@ -31,11 +31,11 @@ class HttpRequestManager: HttpProtocol  {
                     completion(.success(decoded))
                 } catch let error {
                     print("Decoding Error:\(error.localizedDescription)")
-                    completion(.failure(.decoding))
+                    completion(.failure(HttpRequestError.decoding))
                 }
             case .failure(let error):
                 print("Error:\(error.localizedDescription)")
-                completion(.failure(.unavailable))
+                completion(.failure(HttpRequestError.unavailable))
             }
         }
     }
@@ -56,7 +56,7 @@ class HttpRequestManager: HttpProtocol  {
     }
 }
 
-enum HttpRequestError: Error {
+public enum HttpRequestError: Error {
     case unavailable
     case requestFailed
     case decoding

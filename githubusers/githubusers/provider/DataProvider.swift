@@ -1,5 +1,5 @@
 //
-//  Provider.swift
+//  DataProvider.swift
 //  githubusers
 //
 //  Created by José Marques on 18/04/2021.
@@ -9,13 +9,13 @@
 import Foundation
 import UIKit
 
-protocol ProviderProtocol: AnyObject {
-    func fetchUsersList(completion: @escaping (Result<[GitHubUser], HttpRequestError>) -> Void)
-    func fetchUserDetail(user: String, completion: @escaping (Result<GitHubUser, HttpRequestError>) -> Void)
+protocol DataProviderProtocol: AnyObject {
+    func fetchUsersList(completion: @escaping (Result<[GitHubUser], Error>) -> Void)
+    func fetchUserDetail(user: String, completion: @escaping (Result<GitHubUser, Error>) -> Void)
     func fetchUserImage(avatarUrl: String, _ completion: @escaping (_ image: UIImage) -> Void) 
 }
 
-class Provider: ProviderProtocol  {
+class DataProvider: DataProviderProtocol  {
 
     private var dataSource: HttpProtocol
 
@@ -23,8 +23,8 @@ class Provider: ProviderProtocol  {
         self.dataSource = dataSource
     }
 
-    func fetchUsersList(completion: @escaping (Result<[GitHubUser], HttpRequestError>) -> Void) {
-        dataSource.get(Constants.baseUrl) { (_ result: Result<[GitHubUser], HttpRequestError>) in
+    func fetchUsersList(completion: @escaping (Result<[GitHubUser], Error>) -> Void) {
+        dataSource.get(Constants.baseUrl) { (_ result: Result<[GitHubUser], Error>) in
             switch result {
             case .success(let repositoryList):
                 completion(.success(repositoryList))
@@ -34,11 +34,15 @@ class Provider: ProviderProtocol  {
         }
     }
 
-    func fetchUserDetail(user: String, completion: @escaping (Result<GitHubUser, HttpRequestError>) -> Void) {
-        dataSource.get(Constants.baseUrl + Constants.apiSlash + user) { (_ result: Result<GitHubUser, HttpRequestError>) in
+    func fetchUserDetail(user: String, completion: @escaping (Result<GitHubUser, Error>) -> Void) {
+        dataSource.get(Constants.baseUrl + Constants.apiSlash + user) { (_ result: Result<GitHubUser, Error>) in
             switch result {
             case .success(let userDetail):
+                if let _ = userDetail.login {
                 completion(.success(userDetail))
+                } else {
+                    completion(.failure(EmptyRequestError.notFound))
+                }
             case .failure(let error):
                 completion(.failure(error))
             }
@@ -50,4 +54,8 @@ class Provider: ProviderProtocol  {
             completion(result)
         }
     }
+}
+
+public enum EmptyRequestError: Error {
+    case notFound
 }

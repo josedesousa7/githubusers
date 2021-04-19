@@ -17,11 +17,11 @@ class githubusersTests: XCTestCase {
                                 htmlUrl: "",
                                 company: "",
                                 publicRepos: 0)
-    var provider: ProviderProtocol?
+    var provider: DataProviderProtocol?
 
     override func setUpWithError() throws {
         try super.setUpWithError()
-        provider = Provider(dataSource: HttpRequestManager())
+        provider = DataProvider(dataSource: HttpRequestManager())
     }
 
     override func tearDownWithError() throws {
@@ -47,7 +47,6 @@ class githubusersTests: XCTestCase {
             case .failure(let error):
                 print("Error:\(error.localizedDescription)")
                 expectation.fulfill()
-                XCTAssertTrue(error == .unavailable)
             }
         }
 
@@ -72,7 +71,6 @@ class githubusersTests: XCTestCase {
             case .failure(let error):
                 print("Error:\(error.localizedDescription)")
                 expectation.fulfill()
-                XCTAssertTrue(error == .unavailable)
             }
         }
 
