@@ -34,10 +34,10 @@ class UserDetailViewController: UIViewController {
         super.viewDidLoad()
         self.userPictureImageView.layer.cornerRadius = self.userPictureImageView.frame.size.height / 2
         self.dataSource = setupDataSource()
-        self.title = "User Detail"
+        activityIndicator.startAnimating()
+        self.title = NSLocalizedString("user_detail_title", comment: "")
         setupViewModel()
         fetchUserDetail()
-        activityIndicator.startAnimating()
         userInfoStackView.isHidden = true
     }
     

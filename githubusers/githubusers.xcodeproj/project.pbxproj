@@ -26,6 +26,7 @@
 		5A9DA69A262C36E100BE6107 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9DA699262C36E100BE6107 /* Constants.swift */; };
 		5A9DA6A4262C3DBE00BE6107 /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9DA6A3262C3DBE00BE6107 /* DataProvider.swift */; };
 		5A9DA6B6262C41A900BE6107 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9DA691262C369400BE6107 /* Keys.swift */; };
+		5ADC7663262F6FC30042C3CD /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5ADC7665262F6FC30042C3CD /* Localizable.strings */; };
 		B355FA707807C2E9D035DFCD /* Pods_githubusers_githubusersUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 413104980F20EB34F86EEFF4 /* Pods_githubusers_githubusersUITests.framework */; };
 		C832586C74FD58F15F09C5B6 /* Pods_githubusersTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEE6F3E31CAB4C7A4139EA40 /* Pods_githubusersTests.framework */; };
 		EC2F03DF2349D4838C36B8D5 /* Pods_githubusers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32F4DEA77F719D5EFEEC2E5D /* Pods_githubusers.framework */; };
@@ -78,6 +79,7 @@
 		5A9DA691262C369400BE6107 /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		5A9DA699262C36E100BE6107 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		5A9DA6A3262C3DBE00BE6107 /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
+		5ADC7664262F6FC30042C3CD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		880A91E1BE897336785728A5 /* Pods-githubusersTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-githubusersTests.release.xcconfig"; path = "Target Support Files/Pods-githubusersTests/Pods-githubusersTests.release.xcconfig"; sourceTree = "<group>"; };
 		8EE575CEBA8106C1BCCF9C70 /* Pods-githubusers-githubusersUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-githubusers-githubusersUITests.release.xcconfig"; path = "Target Support Files/Pods-githubusers-githubusersUITests/Pods-githubusers-githubusersUITests.release.xcconfig"; sourceTree = "<group>"; };
 		998680A7691477A4CFB04FD6 /* Pods-githubusers-githubusersUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-githubusers-githubusersUITests.debug.xcconfig"; path = "Target Support Files/Pods-githubusers-githubusersUITests/Pods-githubusers-githubusersUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -189,13 +191,13 @@
 		5A9DA629262C1F3900BE6107 /* githubusers */ = {
 			isa = PBXGroup;
 			children = (
+				5ADC766D262F70610042C3CD /* resources */,
 				5A9DA690262C368000BE6107 /* common */,
 				5A9DA668262C21DF00BE6107 /* application */,
 				5A9DA66F262C222B00BE6107 /* data */,
 				5A9DA6A2262C3DA000BE6107 /* provider */,
 				5A8377E8262DF0F100309C01 /* features */,
 				5A9DA630262C1F3900BE6107 /* Main.storyboard */,
-				5A9DA633262C1F3B00BE6107 /* Assets.xcassets */,
 				5A9DA635262C1F3B00BE6107 /* LaunchScreen.storyboard */,
 				5A9DA638262C1F3B00BE6107 /* Info.plist */,
 			);
@@ -269,6 +271,15 @@
 				5A9DA6A3262C3DBE00BE6107 /* DataProvider.swift */,
 			);
 			path = provider;
+			sourceTree = "<group>";
+		};
+		5ADC766D262F70610042C3CD /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				5ADC7665262F6FC30042C3CD /* Localizable.strings */,
+				5A9DA633262C1F3B00BE6107 /* Assets.xcassets */,
+			);
+			path = resources;
 			sourceTree = "<group>";
 		};
 		5E3BFAA9732BB4C06F358049 /* Frameworks */ = {
@@ -390,6 +401,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5ADC7663262F6FC30042C3CD /* Localizable.strings in Resources */,
 				5A837816262E035D00309C01 /* UserTableViewCell.xib in Resources */,
 				5A9DA637262C1F3B00BE6107 /* LaunchScreen.storyboard in Resources */,
 				5A9DA634262C1F3B00BE6107 /* Assets.xcassets in Resources */,
@@ -585,6 +597,14 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		5ADC7665262F6FC30042C3CD /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5ADC7664262F6FC30042C3CD /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -592,6 +612,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -653,6 +674,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

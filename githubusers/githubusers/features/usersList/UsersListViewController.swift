@@ -26,7 +26,7 @@ class UsersListViewController: UIViewController {
         self.dataSource = setupDataSource()
         tableView.register(UINib(nibName: "UserTableViewCell", bundle: nil), forCellReuseIdentifier: "userTableViewCell")
         setupViewModel()
-        self.title = "GitHub Users"
+        self.title = NSLocalizedString("user_list_title", comment: "GitHub Users")
     }
     
     override func viewWillAppear(_ animated: Bool) {
