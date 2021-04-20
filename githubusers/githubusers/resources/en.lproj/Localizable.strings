@@ -8,3 +8,6 @@
 
 "user_list_title" = "GitHub Users";
 "user_detail_title" = "User Detail";
+"ok_alert_button" = "Ok";
+"cancel_alert_button" = "Cancel";
+"user_not_found" = "User does not exist! try another name";

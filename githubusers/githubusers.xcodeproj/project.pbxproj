@@ -27,6 +27,7 @@
 		5A9DA6A4262C3DBE00BE6107 /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9DA6A3262C3DBE00BE6107 /* DataProvider.swift */; };
 		5A9DA6B6262C41A900BE6107 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9DA691262C369400BE6107 /* Keys.swift */; };
 		5ADC7663262F6FC30042C3CD /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5ADC7665262F6FC30042C3CD /* Localizable.strings */; };
+		5ADC7677262F74380042C3CD /* UIViewController + AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADC7676262F74380042C3CD /* UIViewController + AlertViewController.swift */; };
 		B355FA707807C2E9D035DFCD /* Pods_githubusers_githubusersUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 413104980F20EB34F86EEFF4 /* Pods_githubusers_githubusersUITests.framework */; };
 		C832586C74FD58F15F09C5B6 /* Pods_githubusersTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEE6F3E31CAB4C7A4139EA40 /* Pods_githubusersTests.framework */; };
 		EC2F03DF2349D4838C36B8D5 /* Pods_githubusers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32F4DEA77F719D5EFEEC2E5D /* Pods_githubusers.framework */; };
@@ -80,6 +81,7 @@
 		5A9DA699262C36E100BE6107 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		5A9DA6A3262C3DBE00BE6107 /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
 		5ADC7664262F6FC30042C3CD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		5ADC7676262F74380042C3CD /* UIViewController + AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + AlertViewController.swift"; sourceTree = "<group>"; };
 		880A91E1BE897336785728A5 /* Pods-githubusersTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-githubusersTests.release.xcconfig"; path = "Target Support Files/Pods-githubusersTests/Pods-githubusersTests.release.xcconfig"; sourceTree = "<group>"; };
 		8EE575CEBA8106C1BCCF9C70 /* Pods-githubusers-githubusersUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-githubusers-githubusersUITests.release.xcconfig"; path = "Target Support Files/Pods-githubusers-githubusersUITests/Pods-githubusers-githubusersUITests.release.xcconfig"; sourceTree = "<group>"; };
 		998680A7691477A4CFB04FD6 /* Pods-githubusers-githubusersUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-githubusers-githubusersUITests.debug.xcconfig"; path = "Target Support Files/Pods-githubusers-githubusersUITests/Pods-githubusers-githubusersUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -259,6 +261,7 @@
 		5A9DA690262C368000BE6107 /* common */ = {
 			isa = PBXGroup;
 			children = (
+				5ADC7675262F741D0042C3CD /* extensions */,
 				5A9DA691262C369400BE6107 /* Keys.swift */,
 				5A9DA699262C36E100BE6107 /* Constants.swift */,
 			);
@@ -280,6 +283,14 @@
 				5A9DA633262C1F3B00BE6107 /* Assets.xcassets */,
 			);
 			path = resources;
+			sourceTree = "<group>";
+		};
+		5ADC7675262F741D0042C3CD /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5ADC7676262F74380042C3CD /* UIViewController + AlertViewController.swift */,
+			);
+			path = extensions;
 			sourceTree = "<group>";
 		};
 		5E3BFAA9732BB4C06F358049 /* Frameworks */ = {
@@ -537,6 +548,7 @@
 				5A9DA62F262C1F3900BE6107 /* UsersListViewController.swift in Sources */,
 				5A83781E262F396000309C01 /* UserDetailViewController.swift in Sources */,
 				5A837815262E035D00309C01 /* UserTableViewCell.swift in Sources */,
+				5ADC7677262F74380042C3CD /* UIViewController + AlertViewController.swift in Sources */,
 				5A9DA672262C226B00BE6107 /* GitHubUser.swift in Sources */,
 				5A9DA62B262C1F3900BE6107 /* AppDelegate.swift in Sources */,
 				5A8377FB262DF42A00309C01 /* UserTableViewCellViewModel.swift in Sources */,

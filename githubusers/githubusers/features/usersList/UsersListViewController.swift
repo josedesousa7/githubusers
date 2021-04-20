@@ -55,6 +55,7 @@ class UsersListViewController: UIViewController {
                 self.usersList = userList
                 self.tableView.reloadData()
             case .failure(let error):
+                self.presentAlertController(withTitle: "Opps!", andMessage: NSLocalizedString("user_not_found", comment: ""))
                 print(error.localizedDescription)
             }
         }
@@ -103,6 +104,7 @@ extension UsersListViewController: UISearchBarDelegate {
                 self.usersList = userList
                 self.tableView.reloadData()
             case .failure(let error):
+                self.presentAlertController(withTitle: "Opps!", andMessage: NSLocalizedString("user_not_found", comment: ""))
                 print(error.localizedDescription)
             }
         }
@@ -114,11 +116,11 @@ extension UsersListViewController: UISearchBarDelegate {
 extension UsersListViewController {
     func presentDetailsFor(user: GitHubUser) {
         self.user = user
-        self.performSegue(withIdentifier: "detailViewControllerSegue", sender: self)
+        self.performSegue(withIdentifier: Keys.Navigation.detailSegue, sender: self)
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "detailViewControllerSegue" {
+        if segue.identifier == Keys.Navigation.detailSegue {
             guard let destinationVc = segue.destination as? UserDetailViewController else {return}
             destinationVc.user = self.user
         }

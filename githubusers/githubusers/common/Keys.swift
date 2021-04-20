@@ -12,4 +12,8 @@ public struct Keys {
     struct Plist {
         static let baseUrl = "BASE_URL"
     }
+
+    struct Navigation {
+        static let detailSegue = "detailViewControllerSegue"
+    }
 }
