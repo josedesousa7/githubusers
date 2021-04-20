@@ -10,16 +10,19 @@ import UIKit
 
 class UserTableViewCell: UITableViewCell {
 
-
     //MARK: Properties
 
     static let reuseIdentifier = "userTableViewCell"
     private var viewModel: UserTableViewCellViewModel?
     @IBOutlet weak var userLoginNameLabel: UILabel!
     @IBOutlet weak var userProfilePhoto: UIImageView!
+    @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
+
+    //MARK: - Lifecycle methods
 
     override func awakeFromNib() {
         super.awakeFromNib()
+        loadingIndicator.startAnimating()
         self.userLoginNameLabel.font = UIFont(name: "System", size: 20.0)
     }
 
@@ -32,21 +35,23 @@ class UserTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
 
-    //MARK: Private Methods
+    //MARK: - Private Methods
+
     private func setupUI() {
         guard let viewModel = self.viewModel else { return }
         userLoginNameLabel.text = viewModel.model.login 
         DispatchQueue.main.async {
             viewModel.showUserImage{ result in
+                self.loadingIndicator.stopAnimating()
                 self.userProfilePhoto.image = result
             }
         }
     }
 
-//MARK: Public Methods
+    //MARK: - Public Methods
 
     func configureCellWith(viewModel: UserTableViewCellViewModel) {
         self.viewModel = viewModel
-       setupUI()
+        setupUI()
     }
 }

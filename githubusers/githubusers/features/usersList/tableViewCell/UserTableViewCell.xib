@@ -28,10 +28,15 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="SJA-3S-fbG">
+                        <rect key="frame" x="29.5" y="31.5" width="20" height="20"/>
+                    </activityIndicatorView>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="Weg-xL-ego" secondAttribute="bottom" constant="8" id="6r3-pN-mTj"/>
+                    <constraint firstItem="SJA-3S-fbG" firstAttribute="centerY" secondItem="A96-SO-fUj" secondAttribute="centerY" id="8gN-Ld-nj4"/>
                     <constraint firstItem="A96-SO-fUj" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="9Oh-WR-pcd"/>
+                    <constraint firstItem="SJA-3S-fbG" firstAttribute="centerX" secondItem="A96-SO-fUj" secondAttribute="centerX" id="9lF-56-9yf"/>
                     <constraint firstItem="Weg-xL-ego" firstAttribute="leading" secondItem="A96-SO-fUj" secondAttribute="trailing" constant="13" id="ERf-F3-g2N"/>
                     <constraint firstItem="Weg-xL-ego" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="FS0-Pl-FP2"/>
                     <constraint firstItem="A96-SO-fUj" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="Gq8-5Q-VXD"/>
@@ -42,6 +47,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="loadingIndicator" destination="SJA-3S-fbG" id="Dh1-cG-rbX"/>
                 <outlet property="userLoginNameLabel" destination="Weg-xL-ego" id="QbM-gH-Twi"/>
                 <outlet property="userProfilePhoto" destination="A96-SO-fUj" id="ZIi-Ii-J0w"/>
             </connections>
