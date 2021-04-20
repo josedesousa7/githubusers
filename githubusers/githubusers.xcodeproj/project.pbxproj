@@ -11,6 +11,8 @@
 		5A8377FB262DF42A00309C01 /* UserTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8377FA262DF42A00309C01 /* UserTableViewCellViewModel.swift */; };
 		5A837815262E035D00309C01 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A837813262E035D00309C01 /* UserTableViewCell.swift */; };
 		5A837816262E035D00309C01 /* UserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A837814262E035D00309C01 /* UserTableViewCell.xib */; };
+		5A83781E262F396000309C01 /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A83781D262F396000309C01 /* UserDetailViewController.swift */; };
+		5A837823262F397F00309C01 /* UserDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A837822262F397F00309C01 /* UserDetailViewModel.swift */; };
 		5A9DA62B262C1F3900BE6107 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9DA62A262C1F3900BE6107 /* AppDelegate.swift */; };
 		5A9DA62D262C1F3900BE6107 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9DA62C262C1F3900BE6107 /* SceneDelegate.swift */; };
 		5A9DA62F262C1F3900BE6107 /* UsersListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9DA62E262C1F3900BE6107 /* UsersListViewController.swift */; };
@@ -55,6 +57,8 @@
 		5A8377FA262DF42A00309C01 /* UserTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCellViewModel.swift; sourceTree = "<group>"; };
 		5A837813262E035D00309C01 /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
 		5A837814262E035D00309C01 /* UserTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserTableViewCell.xib; sourceTree = "<group>"; };
+		5A83781D262F396000309C01 /* UserDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
+		5A837822262F397F00309C01 /* UserDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewModel.swift; sourceTree = "<group>"; };
 		5A9DA627262C1F3900BE6107 /* githubusers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = githubusers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A9DA62A262C1F3900BE6107 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5A9DA62C262C1F3900BE6107 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -144,6 +148,8 @@
 		5A8377EA262DF11000309C01 /* userDetail */ = {
 			isa = PBXGroup;
 			children = (
+				5A83781D262F396000309C01 /* UserDetailViewController.swift */,
+				5A837822262F397F00309C01 /* UserDetailViewModel.swift */,
 			);
 			path = userDetail;
 			sourceTree = "<group>";
@@ -517,6 +523,7 @@
 			files = (
 				5A9DA680262C2D0100BE6107 /* HttRequestManager.swift in Sources */,
 				5A9DA62F262C1F3900BE6107 /* UsersListViewController.swift in Sources */,
+				5A83781E262F396000309C01 /* UserDetailViewController.swift in Sources */,
 				5A837815262E035D00309C01 /* UserTableViewCell.swift in Sources */,
 				5A9DA672262C226B00BE6107 /* GitHubUser.swift in Sources */,
 				5A9DA62B262C1F3900BE6107 /* AppDelegate.swift in Sources */,
@@ -526,6 +533,7 @@
 				5A9DA62D262C1F3900BE6107 /* SceneDelegate.swift in Sources */,
 				5A9DA6B6262C41A900BE6107 /* Keys.swift in Sources */,
 				5A9DA69A262C36E100BE6107 /* Constants.swift in Sources */,
+				5A837823262F397F00309C01 /* UserDetailViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

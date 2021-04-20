@@ -14,6 +14,9 @@ class UsersListViewController: UIViewController {
     private var viewModel: UsersListViewModel?
     private var dataSource: DataProviderProtocol?
     private var usersList: [GitHubUser] = []
+    private var user: GitHubUser?
+
+    // MARK: - Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,8 +26,15 @@ class UsersListViewController: UIViewController {
         self.dataSource = setupDataSource()
         tableView.register(UINib(nibName: "UserTableViewCell", bundle: nil), forCellReuseIdentifier: "userTableViewCell")
         setupViewModel()
-        self.requestUserList()
+        self.title = "GitHub Users"
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        requestUserList()
+    }
+    // MARK: - Private methods
+
 
     private func setupViewModel() {
         guard let dataSource = dataSource else {
@@ -32,8 +42,6 @@ class UsersListViewController: UIViewController {
         }
         self.viewModel = UsersListViewModel(dataSource: dataSource)
     }
-
-
 
     private func setupDataSource() -> DataProvider {
         return DataProvider(dataSource: HttpRequestManager())
@@ -44,15 +52,16 @@ class UsersListViewController: UIViewController {
             guard let self = self else { return }
             switch result {
             case .success(let userList):
-            self.usersList = userList
-            self.tableView.reloadData()
-
+                self.usersList = userList
+                self.tableView.reloadData()
             case .failure(let error):
                 print(error.localizedDescription)
             }
         }
     }
 }
+
+// MARK: - UITableView
 
 extension UsersListViewController: UITableViewDelegate, UITableViewDataSource {
 
@@ -71,10 +80,17 @@ extension UsersListViewController: UITableViewDelegate, UITableViewDataSource {
         }
     }
 
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let userToPresent = usersList[indexPath.row]
+        presentDetailsFor(user: userToPresent)
+    }
+
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100.0
     }
 }
+
+// MARK: - UISearchBar
 
 extension UsersListViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
@@ -84,8 +100,8 @@ extension UsersListViewController: UISearchBarDelegate {
             guard let self = self else { return }
             switch result {
             case .success(let userList):
-            self.usersList = userList
-            self.tableView.reloadData()
+                self.usersList = userList
+                self.tableView.reloadData()
             case .failure(let error):
                 print(error.localizedDescription)
             }
@@ -93,3 +109,18 @@ extension UsersListViewController: UISearchBarDelegate {
     }
 }
 
+// MARK: - Navigation
+
+extension UsersListViewController {
+    func presentDetailsFor(user: GitHubUser) {
+        self.user = user
+        self.performSegue(withIdentifier: "detailViewControllerSegue", sender: self)
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "detailViewControllerSegue" {
+            guard let destinationVc = segue.destination as? UserDetailViewController else {return}
+            destinationVc.user = self.user
+        }
+    }
+}

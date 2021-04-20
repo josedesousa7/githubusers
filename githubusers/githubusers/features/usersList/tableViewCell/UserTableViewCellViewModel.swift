@@ -9,7 +9,11 @@
 import Foundation
 import UIKit
 
-class UserTableViewCellViewModel {
+protocol UserTableViewCellViewModelProtocol: AnyObject {
+    func showUserImage(_ completion: @escaping (_ image: UIImage?) -> Void)
+}
+
+class UserTableViewCellViewModel: UserTableViewCellViewModelProtocol {
 
     // MARK: - Properties
     private(set) var model: GitHubUser
