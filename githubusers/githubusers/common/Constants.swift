@@ -25,4 +25,5 @@ public enum Constants {
     }()
 
     static let apiSlash = "/"
+    static let detailSegue = "detailViewControllerSegue"
 }

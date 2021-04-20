@@ -116,11 +116,11 @@ extension UsersListViewController: UISearchBarDelegate {
 extension UsersListViewController {
     func presentDetailsFor(user: GitHubUser) {
         self.user = user
-        self.performSegue(withIdentifier: Keys.Navigation.detailSegue, sender: self)
+        self.performSegue(withIdentifier: Constants.detailSegue, sender: self)
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == Keys.Navigation.detailSegue {
+        if segue.identifier == Constants.detailSegue {
             guard let destinationVc = segue.destination as? UserDetailViewController else {return}
             destinationVc.user = self.user
         }

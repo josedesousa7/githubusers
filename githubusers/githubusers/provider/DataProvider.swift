@@ -39,7 +39,7 @@ class DataProvider: DataProviderProtocol  {
             switch result {
             case .success(let userDetail):
                 if let _ = userDetail.login {
-                completion(.success(userDetail))
+                    completion(.success(userDetail))
                 } else {
                     completion(.failure(EmptyRequestError.notFound))
                 }
