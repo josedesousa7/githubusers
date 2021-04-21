@@ -37,7 +37,7 @@ class UserDetailViewModel: UserDetailViewModelProtocol {
     }
     
     func showUserWithName(name: String, completion: @escaping (Result<GitHubUser, Error>) -> Void) {
-        dataSource.fetchUserDetail(user: name){ result in
+        dataSource.fetchUserDetail(user: name) { result in
             switch result {
             case .success(let user):
                 completion(.success(user))

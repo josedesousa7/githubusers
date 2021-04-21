@@ -17,6 +17,8 @@ protocol HttpProtocol {
 
 class HttpRequestManager: HttpProtocol  {
 
+    // MARK: - Public Methods
+
     func get<T>(_ requestUrl: String, _ completion: @escaping (Result<T, Error>) -> Void) where T : Codable {
         AF.request(requestUrl).responseJSON { response in
             switch response.result {

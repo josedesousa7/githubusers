@@ -36,7 +36,6 @@ class UsersListViewController: UIViewController {
     }
     // MARK: - Private methods
 
-
     private func setupViewModel() {
         guard let dataSource = dataSource else {
             return

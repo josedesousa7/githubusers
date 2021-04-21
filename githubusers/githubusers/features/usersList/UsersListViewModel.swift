@@ -20,6 +20,7 @@ class UsersListViewModel: UsersListViewModelProtocol  {
     private var dataSource: DataProviderProtocol
 
     // MARK: - Initializers
+
     init (dataSource: DataProviderProtocol) {
         self.dataSource = dataSource
     }
@@ -38,7 +39,7 @@ class UsersListViewModel: UsersListViewModelProtocol  {
     }
 
     func showUserWithName(name: String, completion: @escaping (Result<[GitHubUser], Error>) -> Void) {
-        dataSource.fetchUserDetail(user: name){ result in
+        dataSource.fetchUserDetail(user: name) { result in
             switch result {
             case .success(let users):
                 completion(.success(Array(arrayLiteral: users)))

@@ -23,6 +23,8 @@ class DataProvider: DataProviderProtocol  {
         self.dataSource = dataSource
     }
 
+    // MARK: - Public Methods
+
     func fetchUsersList(completion: @escaping (Result<[GitHubUser], Error>) -> Void) {
         dataSource.get(Constants.baseUrl) { (_ result: Result<[GitHubUser], Error>) in
             switch result {
