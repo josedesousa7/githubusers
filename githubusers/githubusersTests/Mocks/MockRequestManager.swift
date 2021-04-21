@@ -45,7 +45,6 @@ class MockHttpRequestManager: HttpProtocol {
             }
         } else {
             switch responseType {
-
             case .success:
                 completion(.success(GitHubUser(login: "mock1",
                                                avatarUrl: "mock1_avatarURL",

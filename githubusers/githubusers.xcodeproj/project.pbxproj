@@ -19,7 +19,6 @@
 		5A9DA632262C1F3900BE6107 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A9DA630262C1F3900BE6107 /* Main.storyboard */; };
 		5A9DA634262C1F3B00BE6107 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A9DA633262C1F3B00BE6107 /* Assets.xcassets */; };
 		5A9DA637262C1F3B00BE6107 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A9DA635262C1F3B00BE6107 /* LaunchScreen.storyboard */; };
-		5A9DA642262C1F3C00BE6107 /* githubusersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9DA641262C1F3C00BE6107 /* githubusersTests.swift */; };
 		5A9DA64D262C1F3C00BE6107 /* githubusersUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9DA64C262C1F3C00BE6107 /* githubusersUITests.swift */; };
 		5A9DA672262C226B00BE6107 /* GitHubUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9DA671262C226B00BE6107 /* GitHubUser.swift */; };
 		5A9DA680262C2D0100BE6107 /* HttRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9DA67F262C2D0100BE6107 /* HttRequestManager.swift */; };
@@ -31,6 +30,9 @@
 		5ADC767D262F77180042C3CD /* MockRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADC767C262F77180042C3CD /* MockRequestManager.swift */; };
 		5ADC7685262F81AD0042C3CD /* MockDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADC7684262F81AD0042C3CD /* MockDataProvider.swift */; };
 		5ADC768A262F85AA0042C3CD /* DataProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADC7689262F85AA0042C3CD /* DataProviderTests.swift */; };
+		5ADC768F263011960042C3CD /* UserListViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADC768E263011960042C3CD /* UserListViewModelTest.swift */; };
+		5ADC769426301BEA0042C3CD /* UserDetailViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADC769326301BEA0042C3CD /* UserDetailViewModelTests.swift */; };
+		5ADC76992630438F0042C3CD /* UserTableViewCellViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADC76982630438F0042C3CD /* UserTableViewCellViewModelTests.swift */; };
 		B355FA707807C2E9D035DFCD /* Pods_githubusers_githubusersUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 413104980F20EB34F86EEFF4 /* Pods_githubusers_githubusersUITests.framework */; };
 		C832586C74FD58F15F09C5B6 /* Pods_githubusersTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEE6F3E31CAB4C7A4139EA40 /* Pods_githubusersTests.framework */; };
 		EC2F03DF2349D4838C36B8D5 /* Pods_githubusers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32F4DEA77F719D5EFEEC2E5D /* Pods_githubusers.framework */; };
@@ -73,7 +75,6 @@
 		5A9DA636262C1F3B00BE6107 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5A9DA638262C1F3B00BE6107 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A9DA63D262C1F3C00BE6107 /* githubusersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = githubusersTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5A9DA641262C1F3C00BE6107 /* githubusersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = githubusersTests.swift; sourceTree = "<group>"; };
 		5A9DA643262C1F3C00BE6107 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A9DA648262C1F3C00BE6107 /* githubusersUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = githubusersUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A9DA64C262C1F3C00BE6107 /* githubusersUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = githubusersUITests.swift; sourceTree = "<group>"; };
@@ -88,6 +89,9 @@
 		5ADC767C262F77180042C3CD /* MockRequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRequestManager.swift; sourceTree = "<group>"; };
 		5ADC7684262F81AD0042C3CD /* MockDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDataProvider.swift; sourceTree = "<group>"; };
 		5ADC7689262F85AA0042C3CD /* DataProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProviderTests.swift; sourceTree = "<group>"; };
+		5ADC768E263011960042C3CD /* UserListViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewModelTest.swift; sourceTree = "<group>"; };
+		5ADC769326301BEA0042C3CD /* UserDetailViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewModelTests.swift; sourceTree = "<group>"; };
+		5ADC76982630438F0042C3CD /* UserTableViewCellViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCellViewModelTests.swift; sourceTree = "<group>"; };
 		880A91E1BE897336785728A5 /* Pods-githubusersTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-githubusersTests.release.xcconfig"; path = "Target Support Files/Pods-githubusersTests/Pods-githubusersTests.release.xcconfig"; sourceTree = "<group>"; };
 		8EE575CEBA8106C1BCCF9C70 /* Pods-githubusers-githubusersUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-githubusers-githubusersUITests.release.xcconfig"; path = "Target Support Files/Pods-githubusers-githubusersUITests/Pods-githubusers-githubusersUITests.release.xcconfig"; sourceTree = "<group>"; };
 		998680A7691477A4CFB04FD6 /* Pods-githubusers-githubusersUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-githubusers-githubusersUITests.debug.xcconfig"; path = "Target Support Files/Pods-githubusers-githubusersUITests/Pods-githubusers-githubusersUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -215,10 +219,10 @@
 		5A9DA640262C1F3C00BE6107 /* githubusersTests */ = {
 			isa = PBXGroup;
 			children = (
+				5ADC76A1263043AF0042C3CD /* viewModelsTests */,
+				5ADC76A02630439E0042C3CD /* dataprovidertests */,
 				5ADC767B262F76CE0042C3CD /* Mocks */,
-				5A9DA641262C1F3C00BE6107 /* githubusersTests.swift */,
 				5A9DA643262C1F3C00BE6107 /* Info.plist */,
-				5ADC7689262F85AA0042C3CD /* DataProviderTests.swift */,
 			);
 			path = githubusersTests;
 			sourceTree = "<group>";
@@ -308,6 +312,24 @@
 				5ADC7684262F81AD0042C3CD /* MockDataProvider.swift */,
 			);
 			path = Mocks;
+			sourceTree = "<group>";
+		};
+		5ADC76A02630439E0042C3CD /* dataprovidertests */ = {
+			isa = PBXGroup;
+			children = (
+				5ADC7689262F85AA0042C3CD /* DataProviderTests.swift */,
+			);
+			path = dataprovidertests;
+			sourceTree = "<group>";
+		};
+		5ADC76A1263043AF0042C3CD /* viewModelsTests */ = {
+			isa = PBXGroup;
+			children = (
+				5ADC768E263011960042C3CD /* UserListViewModelTest.swift */,
+				5ADC769326301BEA0042C3CD /* UserDetailViewModelTests.swift */,
+				5ADC76982630438F0042C3CD /* UserTableViewCellViewModelTests.swift */,
+			);
+			path = viewModelsTests;
 			sourceTree = "<group>";
 		};
 		5E3BFAA9732BB4C06F358049 /* Frameworks */ = {
@@ -582,9 +604,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5A9DA642262C1F3C00BE6107 /* githubusersTests.swift in Sources */,
 				5ADC7685262F81AD0042C3CD /* MockDataProvider.swift in Sources */,
+				5ADC76992630438F0042C3CD /* UserTableViewCellViewModelTests.swift in Sources */,
 				5ADC768A262F85AA0042C3CD /* DataProviderTests.swift in Sources */,
+				5ADC769426301BEA0042C3CD /* UserDetailViewModelTests.swift in Sources */,
+				5ADC768F263011960042C3CD /* UserListViewModelTest.swift in Sources */,
 				5ADC767D262F77180042C3CD /* MockRequestManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

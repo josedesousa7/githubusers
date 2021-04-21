@@ -71,10 +71,10 @@ class UserDetailViewController: UIViewController {
             self.viewModel?.showUserWithName(name: user.login ?? "") {[weak self] result in
                 guard let self = self else { return }
                 switch result {
-                case .success(let userList):
+                case .success(let user):
                     self.activityIndicator.stopAnimating()
                     self.userInfoStackView.isHidden = false
-                    self.setupUser(user: userList.first)
+                    self.setupUser(user: user)
                 case .failure(let error):
                     self.activityIndicator.stopAnimating()
                     print(error.localizedDescription)

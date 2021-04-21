@@ -11,7 +11,7 @@ import UIKit
 
 protocol UserDetailViewModelProtocol: AnyObject {
     func showUserImage(user: GitHubUser, completion: @escaping (_ image: UIImage?) -> Void)
-    func showUserWithName(name: String, completion: @escaping (Result<[GitHubUser], Error>) -> Void)
+    func showUserWithName(name: String, completion: @escaping (Result<GitHubUser, Error>) -> Void)
 }
 
 class UserDetailViewModel: UserDetailViewModelProtocol {
@@ -36,11 +36,11 @@ class UserDetailViewModel: UserDetailViewModelProtocol {
         }
     }
     
-    func showUserWithName(name: String, completion: @escaping (Result<[GitHubUser], Error>) -> Void) {
+    func showUserWithName(name: String, completion: @escaping (Result<GitHubUser, Error>) -> Void) {
         dataSource.fetchUserDetail(user: name){ result in
             switch result {
-            case .success(let users):
-                completion(.success(Array(arrayLiteral: users)))
+            case .success(let user):
+                completion(.success(user))
             case .failure(let error):
                 completion(.failure(error))
             }

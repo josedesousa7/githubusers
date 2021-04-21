@@ -32,6 +32,7 @@ class UsersListViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         requestUserList()
+        searchBar.text = ""
     }
     // MARK: - Private methods
 
@@ -55,7 +56,7 @@ class UsersListViewController: UIViewController {
                 self.usersList = userList
                 self.tableView.reloadData()
             case .failure(let error):
-                self.presentAlertController(withTitle: "Opps!", andMessage: NSLocalizedString("user_not_found", comment: ""))
+                self.presentAlertController(withTitle: "Opps!", andMessage: NSLocalizedString("no_internet_connection", comment: ""))
                 print(error.localizedDescription)
             }
         }
